@@ -15,3 +15,4 @@ test:
     - echo "$CMDOUT"
     - echo "$BRUNCH"
     - echo "$CASE"
+    - pwd
