@@ -3,6 +3,8 @@ machine:
     VAR: value
     APPENDED: "/foo:$PATH"
     CMDOUT: "`pwd`"
+    BRUNCH: "$CIRCLE_BRANCH"
+    CASE: "`case $CIRCLE_BRANCH in master) echo mstr ;; *) echo els ;; esac`"
 
 test:
   override:
@@ -11,3 +13,5 @@ test:
     - echo "$VAR"
     - echo "$APPENDED"
     - echo "$CMDOUT"
+    - echo "$BRUNCH"
+    - echo "$CASE"
