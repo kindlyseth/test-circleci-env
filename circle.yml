@@ -1,0 +1,8 @@
+machine:
+  environment:
+    VAR: value
+
+test:
+  override:
+    - echo sanity
+    - echo "$VAR"
