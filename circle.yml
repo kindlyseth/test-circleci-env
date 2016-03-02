@@ -1,8 +1,13 @@
 machine:
   environment:
     VAR: value
+    APPENDED: "/foo:$PATH"
+    CMDOUT: "`pwd`"
 
 test:
   override:
+    - echo #nothing
     - echo sanity
     - echo "$VAR"
+    - echo "$APPENDED"
+    - echo "$CMDOUT"
